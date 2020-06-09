@@ -3,6 +3,14 @@
 <head>
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .one {
+            color: green;
+        }
+        .two {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 
 <body>
@@ -10,6 +18,9 @@
     <div id="app">
         <h2>{{ title }}</h2>
         <p>{{ greet('night') }}</p>
+        <a v-bind:href="url">Youtube</a>
+        <div v-bind:class="classes">Classes from Instance</div>
+        <input type="text" v-bind:value="name" />
     </div>
 
     <script src="app.js"></script>
