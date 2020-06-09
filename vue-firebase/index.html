@@ -18,9 +18,9 @@
     <div id="app">
         <h2>{{ title }}</h2>
         <p>{{ greet('night') }}</p>
-        <a v-bind:href="url">Youtube</a>
-        <div v-bind:class="classes">Classes from Instance</div>
-        <input type="text" v-bind:value="name" />
+        <a :href="url">Youtube</a>
+        <div :class="classes">Classes from Instance</div>
+        <input type="text" :value="name" />
     </div>
 
     <script src="app.js"></script>
