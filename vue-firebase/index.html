@@ -4,11 +4,11 @@
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
-        .one {
-            color: green;
-        }
-        .two {
-            text-decoration: line-through;
+        .canvas {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            background: #ddd;
         }
     </style>
 </head>
@@ -18,10 +18,8 @@
     <div id="app">
         <h2>{{ title }}</h2>
         <p>I earn {{ wage }} pounds per hour</p>
-        <button v-on:click="changeWage(1)">Increase wage by $1</button>
-        <button v-on:click="changeWage(-1)">Decrease wage by $1</button>
-        <button v-on:dblclick="changeWage(5)">Increase wage by $5</button>
-        <button v-on:dblclick="changeWage(-5)">Decrease wage by $5</button>
+        <button @click="logEvent">Log Event Info</button>
+        <div class="canvas" @mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
     </div>
 
     <script src="app.js"></script>
