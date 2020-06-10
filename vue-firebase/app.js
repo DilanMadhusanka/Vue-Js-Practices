@@ -6,7 +6,9 @@ new Vue({
         coords: {
             x: 0,
             y: 0
-        }
+        },
+        showName: false,
+        showAge: true
     },
     methods: {
         logEvent(e) {
@@ -21,6 +23,12 @@ new Vue({
         },
         logMessage() {
             console.log("Hello world")
+        },
+        toggleName() {
+            this.showName = !this.showName
+        },
+        toggleAge() {
+            this.showAge = !this.showAge
         }
     }
 })
