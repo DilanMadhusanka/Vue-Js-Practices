@@ -18,6 +18,9 @@ new Vue({
         },
         updateName(e) {
             this.name = e.target.value
+        },
+        logMessage() {
+            console.log("Hello world")
         }
     }
 })
