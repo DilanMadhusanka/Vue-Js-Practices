@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         title: 'Becoming a Vue ninja',
-        wage: 10,
+        name: 'Vue',
         coords: {
             x: 0,
             y: 0
@@ -15,6 +15,9 @@ new Vue({
         logCoords(e) {
             this.coords.x = e.offsetX
             this.coords.y = e.offsetY
+        },
+        updateName(e) {
+            this.name = e.target.value
         }
     }
 })

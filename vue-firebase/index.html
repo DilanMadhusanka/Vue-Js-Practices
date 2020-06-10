@@ -17,9 +17,12 @@
     <h1>Vue basics</h1>
     <div id="app">
         <h2>{{ title }}</h2>
-        <p>I earn {{ wage }} pounds per hour</p>
+        <p>My name is {{ name }}</p>
         <button @click="logEvent">Log Event Info</button>
         <div class="canvas" @mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
+        <br/>
+        <input type="text" @keyup="updateName"/>
+        <input type="text" @keypress="updateName" />
     </div>
 
     <script src="app.js"></script>
