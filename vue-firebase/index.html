@@ -17,10 +17,9 @@
     <h1>Vue basics</h1>
     <div id="app">
         <h2>{{ title }}</h2>
-        <p>{{ greet('night') }}</p>
-        <a :href="url">Youtube</a>
-        <div :class="classes">Classes from Instance</div>
-        <input type="text" :value="name" />
+        <p>I earn {{ wage }} pounds per hour</p>
+        <button v-on:click="wage++">Increase wage by $1</button>
+        <button v-on:click="wage--">Decrease wage by $1</button>
     </div>
 
     <script src="app.js"></script>
