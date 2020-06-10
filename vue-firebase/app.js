@@ -5,8 +5,8 @@ new Vue({
         wage: 10
     },
     methods: {
-        greet(time) {
-            return `Hello and good ${time} ${this.name}`
+        changeWage(amount) {
+            this.wage += amount
         }
     }
 })
