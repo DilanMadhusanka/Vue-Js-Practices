@@ -35,7 +35,7 @@
         </div>
         <!-- Conditional output with v-if -->
         <p v-if="showName">Condition</p>
-        <p v-if="showAge">25</p>
+        <p v-else-if="showAge">25</p>
         <button @click="toggleName">ShowName: {{ showName }}</button>
         <button @click="toggleAge">ShowName: {{ showAge }}</button>
     </div>
