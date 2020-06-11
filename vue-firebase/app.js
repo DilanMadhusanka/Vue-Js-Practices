@@ -9,7 +9,12 @@ new Vue({
         },
         showName: false,
         showAge: true,
-        items: ['Mushroom', 'Green Shells', 'Red Shells', 'Banana', 'Star']
+        items: ['Mushroom', 'Green Shells', 'Red Shells', 'Banana', 'Star'],
+        ninjas: [
+            { name: 'Crystal', age: 25, belt: 'Black'},
+            { name: 'Ryu', age: 30, belt: 'Brown'},
+            { name: 'Ken', age: 35, belt: 'Orange'},
+        ]
     },
     methods: {
         logEvent(e) {

@@ -43,6 +43,11 @@
         <ul>
             <li v-for="item in items">{{ item }}</li>
         </ul>
+        <div v-for="(ninga, index) in ninjas">
+            <h5>{{ index }} - {{ ninga.name }}</h5>
+            <p>{{ ninga.age}}</p>
+            <p>{{ ninga.belt }}</p>
+        </div>
     </div>
 
     <script src="app.js"></script>
