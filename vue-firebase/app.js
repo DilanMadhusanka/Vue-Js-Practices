@@ -8,7 +8,8 @@ new Vue({
             y: 0
         },
         showName: false,
-        showAge: true
+        showAge: true,
+        items: ['Mushroom', 'Green Shells', 'Red Shells', 'Banana', 'Star']
     },
     methods: {
         logEvent(e) {
