@@ -19,11 +19,15 @@
 </template>
 
 <script>
-import Navbar from "./Navbar";
+import Navbar from "./Navbar"
+import AllFriends from './AllFriends'
+import OnlineFriends from './OnlineFriends'
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    OnlineFriends,
+    AllFriends
   },
   data() {
     return {
