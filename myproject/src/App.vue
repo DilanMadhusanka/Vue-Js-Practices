@@ -2,19 +2,8 @@
   <div id="app">
     <h1>{{ title }}</h1>
     <Navbar />
-    <nav>
-      <ul>
-        <li>
-          <a href>Home</a>
-        </li>
-        <li>
-          <a href>About</a>
-        </li>
-        <li>
-          <a href>Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <AllFriends />
+    <OnlineFriends />
   </div>
 </template>
 
@@ -22,6 +11,7 @@
 import Navbar from "./Navbar"
 import AllFriends from './AllFriends'
 import OnlineFriends from './OnlineFriends'
+
 export default {
   name: "app",
   components: {
