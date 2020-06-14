@@ -32,10 +32,13 @@ export default {
     },
     created() {
         alert('created hook')
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://jsonplaceholder.typicode.com/postss')
         .then(response => {
             console.log(response)
             this.posts = response.data
+        })
+        .catch(err => {
+            console.log(err)
         })
     },
     beforeUpdate() {
