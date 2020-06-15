@@ -4,7 +4,7 @@
         <button @click="changeTitle">Change Title</button>
         <br /> <br/>
         <input type="text" v-model="searchTerm">
-        <div v-for="post in posts" :key="post.id">
+        <div v-for="post in filteredPosts" :key="post.id">
             <h3>{{ post.title}}</h3>
             <p>{{post.body | snippet }}</p>
         </div>
@@ -29,6 +29,13 @@ export default {
             this.blogTitle = 'Amazing Blog Site'
         }
     },
+    computed: {
+        filteredPosts() {
+            return this.posts.filter(post => {
+                return post.title.match(this.searchTerm)
+            })
+        }
+    },
     beforeCreate() {
         alert('beforeCreate hook')
     },
@@ -43,11 +50,11 @@ export default {
             console.log(err)
         })
     },
-    beforeUpdate() {
-        alert('beforeUpdate hook')
-    },
-    updated() {
-        alert('updated hook')
-    }
+    // beforeUpdate() {
+    //     alert('beforeUpdate hook')
+    // },
+    // updated() {
+    //     alert('updated hook')
+    // }
 }
 </script>
