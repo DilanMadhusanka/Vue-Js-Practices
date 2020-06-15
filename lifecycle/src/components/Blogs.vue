@@ -2,7 +2,8 @@
     <div class="blogs">
         <h2>{{ blogTitle }}</h2>
         <button @click="changeTitle">Change Title</button>
-        <br />
+        <br /> <br/>
+        <input type="text" v-model="searchTerm">
         <div v-for="post in posts" :key="post.id">
             <h3>{{ post.title}}</h3>
             <p>{{post.body | snippet }}</p>
@@ -19,7 +20,8 @@ export default {
     data() {
         return {
             blogTitle: 'Blogs',
-            posts: []
+            posts: [],
+            searchTerm: ''
         }
     },
     methods: {
