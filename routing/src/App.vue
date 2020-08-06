@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <NavBar />
+    <img alt="Vue logo" src="./assets/logo.png" />
     <router-view />
   </div>
 </template>
 
 <script>
-
+import NavBar from "./components/NavBar";
 
 export default {
-  name: 'App',
-}
+  name: "App",
+  components: { NavBar },
+};
 </script>
 
 <style>
