@@ -4,11 +4,11 @@
       <div class="card-content">
         <i class="material-icons delete" @click="deleteSmoothie(smoothie.id)">delete</i>
         <h2 class="indigo-text">{{smoothie.title}}</h2>
-        <ui class="ingredients">
+        <ul class="ingredients">
           <li v-for="(ing, index) in smoothie.ingredients" :key="index">
             <span class="chip">{{ing}}</span>
           </li>
-        </ui>
+        </ul>
       </div>
     </div>
   </div>
