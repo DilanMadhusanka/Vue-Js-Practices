@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Welcome from '../components/Welcome.vue'
+import Chat from '@/components/Chat'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,12 @@ const routes = [
     name: 'Welcome',
     component: Welcome
   },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: Chat,
+    props: true
+  }
 ]
 
 const router = new VueRouter({
