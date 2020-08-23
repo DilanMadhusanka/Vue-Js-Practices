@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     signup() {
-      if ((this.alias && this.email, this.password)) {
+      if (this.alias && this.email && this.password) {
         this.slug = slugify(this.alias, {
           replacement: "-",
           remove: /[*+~.()'"!:@]/g,
@@ -51,19 +51,27 @@ export default {
           if (doc.exists) {
             this.feedback = "This alias already exists";
           } else {
-            // firebase
-            //   .auth()
-            //   .createUserWithEmailAndPassword(this.email, this.password)
-            //   .catch((err) => {
-            //     console.log(err);
-            //     this.feedback = err.message;
-            //   });
-            this.feedback = "This alias is free to use";
+            firebase
+              .auth()
+              .createUserWithEmailAndPassword(this.email, this.password)
+              .then((user) => {
+                ref.set({
+                  alias: this.alias,
+                  geolocation: null,
+                  user_id: user.user.uid,
+                });
+              })
+              .then(() => {
+                this.$router.push({ name: "GMap" });
+              })
+              .catch((err) => {
+                console.log(err);
+                this.feedback = err.message;
+              });
           }
         });
-        console.log(this.slug);
       } else {
-        this.feedback = "You must enter an alias";
+        this.feedback = "You must enter all fields";
       }
     },
   },
