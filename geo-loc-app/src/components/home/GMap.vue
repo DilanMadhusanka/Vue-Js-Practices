@@ -28,9 +28,6 @@ export default {
   mounted() {
     this.renderMap();
     console.log(firebase.auth().currentUser);
-    setTimeout(() => {
-      console.log(firebase.auth().currentUser);
-    }, 2000);
   },
 };
 </script>
